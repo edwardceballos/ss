@@ -1,8 +1,9 @@
-# Use Alpine Linux as the base image
-FROM alpine:latest
+# Use Red Hat Universal Base Image Minimal
+FROM registry.access.redhat.com/ubi8/ubi-minimal
 
-# Install msmtp and ca-certificates for SSL
-RUN apk add --no-cache msmtp ca-certificates
+# Install msmtp and ca-certificates
+RUN microdnf install msmtp ca-certificates && \
+    microdnf clean all
 
 # Copy the script and configuration files
 COPY send-mail.sh send-mail.sh
