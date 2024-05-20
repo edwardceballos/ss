@@ -12,4 +12,4 @@ COPY msmtprc /etc/msmtprc
 RUN chmod +x send-mail.sh
 
 # Default command
-CMD ["./send-mail.sh"]
+CMD ["send-mail.sh"]
