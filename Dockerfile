@@ -1,5 +1,5 @@
 # Use Red Hat Universal Base Image Minimal
-FROM registry.access.redhat.com/ubi8/ubi
+FROM registry.access.redhat.com/ubi8/dotnet-70-runtime
 
 # Install msmtp and ca-certificates
 USER 0
