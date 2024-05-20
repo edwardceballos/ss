@@ -1,5 +1,5 @@
 # Use Red Hat Universal Base Image Minimal
-FROM registry.access.redhat.com/ubi8/ubi-minimal
+FROM registry.access.redhat.com/ubi8/ubi
 
 # Install msmtp and ca-certificates
 RUN microdnf install msmtp ca-certificates && \
