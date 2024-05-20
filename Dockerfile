@@ -2,8 +2,9 @@
 FROM registry.access.redhat.com/ubi8/ubi
 
 # Install msmtp and ca-certificates
-RUN microdnf install msmtp ca-certificates && \
-    microdnf clean all
+RUN microdnf update -y
+RUN microdnf install -y msmtp ca-certificates
+RUN microdnf clean all
 
 # Copy the script and configuration files
 COPY send-mail.sh send-mail.sh
